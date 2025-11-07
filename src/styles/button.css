@@ -1,0 +1,35 @@
+.btn {
+  height: 40px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  color: var(--color-black);
+}
+
+/* PRIMARY STYLE */
+.btn.primary {
+  background-color: var(--color-primary); /* Default darker */
+}
+
+.btn.primary:hover {
+  background-color: var(--color-primary-hover); /* Lighter on hover */
+}
+
+.btn.primary.pressed {
+  background-color: var(--color-primary); /* Darker again on press */
+  transform: translateY(0.5px); /* Slight press movement */
+}
+
+
+
+/* DISABLED */
+.btn.disabled {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-main);
+  color: var(--color-gray-text);
+  cursor: not-allowed;
+  transform: none;
+}
