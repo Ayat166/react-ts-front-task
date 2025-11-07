@@ -1,0 +1,54 @@
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-gray-main, #ccc);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background-color: var(--color-white, #fff);
+}
+
+
+.check-icon {
+  stroke: transparent;
+  transform: scale(1.15);
+  transition: all 0.2s ease;
+}
+
+/* Hover (unchecked): show gray thin check mark */
+.checkbox:hover .check-icon {
+  stroke: var(--color-gray-main);
+  border-color: var(--color-gray-main);
+}
+
+/* Checked state */
+.checkbox.checked {
+  background-color: var(--color-blue, #007bff);
+  border-color: var(--color-blue, #007bff);
+}
+
+.checkbox.checked .check-icon {
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+/* Hover while checked - slightly lighter */
+.checkbox.checked:hover {
+  background-color: var(--color-blue-hover, #3399ff);
+}
+
+/* Optional label */
+.checkbox-label {
+  margin-left: 8px;
+  font-size: 14px;
+  color: var(--color-black, #000);
+}
