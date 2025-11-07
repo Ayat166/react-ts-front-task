@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #ffce22;
+  --color-primary-hover: #ffd84d;
+  --color-blue: #2469f6;
+  --color-blue-pressed: #5087f8;
+  --color-black: #1f2128;
+  --color-gray-main: #cdcdcd;
+  --color-gray-medium: #bdbdbd;
+  --color-gray-light: #eeeeee;
+  --color-gray-text: #878787;
+  --color-white: #ffffff;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --font-family: 'Montserrat', sans-serif;
+  --font-size: 14px;
+  --line-height: 130%;
+
+  --shadow-card: 0px 0px 4px rgba(20, 20, 20, 0.1),
+    0px 8px 15px rgba(20, 20, 20, 0.12);
+}

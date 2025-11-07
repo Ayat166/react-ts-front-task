@@ -8,7 +8,7 @@
 .checkbox {
   width: 20px;
   height: 20px;
-  border: 2px solid var(--color-gray-main, #ccc);
+  border: 2px solid var(--color-gray-light, #ccc);
   border-radius: 6px;
   display: flex;
   align-items: center;
