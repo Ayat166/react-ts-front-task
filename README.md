@@ -93,15 +93,17 @@ src/
 ├── components/
 │   ├── ui/
 │   │   ├── Button.tsx
-│   │   ├── Card.tsx
-│   │   ├── Checkbox.tsx
-│   │   └── Dropdown.tsx
-│   └── index.ts
+│   │   ├── LineDropdown.tsx
+│   │   └── Checkbox.tsx
+|   ├── Dropdown.tsx
+|   ├── ListItem.tsx 
+│   └── Card.tsx
 ├── styles/
 │   ├── button.css
 │   ├── card.css
 │   ├── checkbox.css
-│   ├── dropdown.css
+│   ├── linedropdown.css
+│   ├── listitems.css
 │   ├── global.css
 │   └── variables.css
 ├── App.tsx
