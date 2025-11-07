@@ -1,73 +1,128 @@
-# React + TypeScript + Vite
+# Frontend UI Components Implementation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This project implements pixel-perfect UI components based on Figma design specifications for Taskina Pty Ltd's frontend assessment. The implementation focuses on creating reusable, accessible, and interactive components using React and TypeScript.
 
-Currently, two official plugins are available:
+## Live Demo
+🔗 [View Live Demo](https://react-ts-front-task.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- 🎨 Pixel-perfect implementation of Figma design
+- 🔷 Modern React with TypeScript
+- 📱 Responsive and interactive components
+- ♿ Accessible UI components
+- 🎯 Clean and maintainable code structure
 
-## React Compiler
+## Tech Stack
+- React 18
+- TypeScript
+- CSS Modules
+- Vite (Build tool)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Components
 
-## Expanding the ESLint configuration
+### Button
+```typescript
+import Button from './components/ui/Button';
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<Button 
+  text="Done" 
+  variant="primary" 
+  onClick={() => {}} 
+/>
+```
+Props:
+- `text`: string - Button label
+- `variant`: 'primary' | 'blue' - Button style variant
+- `onClick`: () => void - Click handler
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Dropdown
+```typescript
+import Dropdown from './components/ui/Dropdown';
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<Dropdown 
+  mainoption="All Pages" 
+  options={["Page 1", "Page 2"]} 
+/>
+```
+Props:
+- `mainoption`: string - Default selected option
+- `options`: string[] - Array of available options
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Card
+```typescript
+import Card from './components/ui/Card';
+
+<Card>
+  {/* Card content */}
+</Card>
+```
+Props:
+- `children`: ReactNode - Card content
+
+## Getting Started
+
+### Prerequisites
+- Node.js 16.x or higher
+- npm or yarn
+
+### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/Ayat166/react-ts-front-task.git
+cd react-ts-front-task
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
 ```
+
+3. Start development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+## Project Structure
+```
+src/
+├── components/
+│   ├── ui/
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Checkbox.tsx
+│   │   └── Dropdown.tsx
+│   └── index.ts
+├── styles/
+│   ├── button.css
+│   ├── card.css
+│   ├── checkbox.css
+│   ├── dropdown.css
+│   ├── global.css
+│   └── variables.css
+├── App.tsx
+└── main.tsx
+```
+
+## Accessibility Features
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- Focus management
+- High contrast colors
+- Screen reader friendly structure
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Contact
+Ayat - [GitHub Profile](https://github.com/Ayat166)
+
+Project Link: [https://github.com/Ayat166/react-ts-front-task](https://github.com/Ayat166/react-ts-front-task)
